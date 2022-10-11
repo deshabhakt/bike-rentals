@@ -1,0 +1,251 @@
+.menu-bar {
+    position: fixed;
+    align-self: center;
+    top: 0.5rem;
+    width: 88%;
+    padding: 1.3% 2% 1.3% 5%;
+    background-color: rgba(8, 8, 8, 0.479);
+    border-radius: 1rem;
+    display: flex;
+    z-index: 10;
+}
+
+.menu-bar__nav-items {
+    flex: 2;
+    justify-content: flex-start;
+    align-items: center;
+
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5%;
+    width: fit-content;
+    z-index: 10;
+}
+
+.menu-bar__nav-items__link,
+.menu-bar__logon__link {
+    font-weight: bold;
+    color: white;
+    font-size: 80%;
+    text-decoration: none;
+}
+
+.menu-bar__logon__link:active,
+.menu-bar__nav-items__link:active {
+    outline: none;
+}
+
+.menu-bar__logon__link {
+    align-self: center;
+}
+
+.menu-bar__logon-div {
+    flex: 1.2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.menu-bar__logon-div__user-icon {
+    color: white;
+}
+
+.user-icon-drop-down-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: transparent !;
+}
+
+.user-icon-drop-down-container {
+    position: fixed;
+    right: 2.5%;
+    top: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    background-color: rgb(117, 97, 97);
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    transition: 300ms ease-in-out;
+
+    animation: user-icon-drop-down-appear 275ms ease-in-out 1;
+    visibility: none;
+}
+
+
+
+@keyframes user-icon-drop-down-appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* drop down user card */
+.dorp-down-user-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.drop-down-user-card__user-icon {
+    height: 125px;
+    width: 125px;
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-down-user-card__user-name {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+.drop-down-user-card__user-email {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+
+
+.drop-down-user-card__manage-account-btn,
+.user-icon-drop-down-container__button__sign-out {
+    margin-top: 1.4rem;
+    border-radius: 2rem;
+    border: 0;
+
+    font-size: 1.2rem;
+    width: 20rem;
+    color: white;
+
+    transition: 300ms ease-in-out;
+}
+
+.drop-down-user-card__manage-account-btn {
+    background-color: chocolate;
+}
+
+.drop-down-user-card__manage-account-btn:hover {
+    background-color: rgb(151, 76, 22);
+}
+
+.user-icon-drop-down-container__button__sign-out {
+    margin-top: 1rem;
+    background-color: crimson;
+}
+
+.user-icon-drop-down-container__button__sign-out:hover {
+    background-color: rgb(110, 7, 28);
+}
+
+
+
+.drop-down-user-card__manage-account-btn:active {
+    border: 0;
+    transition: 300ms ease-in-out;
+}
+
+/* drop down sign on card */
+
+.drop-down-sign-on-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 20rem;
+}
+
+.drop-down-sign-on-card__button__sign-in,
+.drop-down-sign-on-card__button__sign-up {
+    align-self: center;
+    border-radius: 2rem;
+    color: white;
+    width: 100%;
+}
+
+.drop-down-sign-on-card__button__sign-in {
+    background-color: green;
+}
+
+.drop-down-sign-on-card__button__sign-in:hover {
+    background-color: rgb(20, 92, 20);
+}
+
+.drop-down-sign-on-card__button__sign-up {
+    background-color: olivedrab;
+}
+
+.drop-down-sign-on-card__button__sign-up:hover {
+    background-color: rgb(63, 88, 13);
+}
+
+
+
+/********************************************************************************/
+
+@media screen and (max-width:1080px) {
+
+    .menu-bar__nav-items__link,
+    .menu-bar__logon__link {
+        font-size: 60%;
+    }
+
+    .menu-bar__logon-div {
+        padding-right: 1rem;
+    }
+
+    .user-icon-drop-down-container {
+        top: 8%;
+    }
+}
+
+@media screen and (max-width:720px) {
+
+    .user-icon-drop-down-container {
+        top:8%;
+        width: 50%;
+    }
+    .drop-down-sign-on-card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 12rem;
+    }
+    .drop-down-sign-on-card__button__sign-in,
+    .drop-down-sign-on-card__button__sign-up {
+        width: 100%;
+    }
+
+    .drop-down-user-card__user-icon{
+        height: 75px;
+        width: 75px;
+        object-fit: contain;
+    }
+    .drop-down-user-card__user-name{
+        font-size: 1.2rem;
+    }
+    .drop-down-user-card__user-email{
+        font-size: 1rem;
+    }
+   
+    .drop-down-user-card__manage-account-btn,
+    .user-icon-drop-down-container__button__sign-out{
+        font-size: 1rem;
+        width: 12rem;
+    }
+}

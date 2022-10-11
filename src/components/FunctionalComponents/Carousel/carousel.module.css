@@ -1,0 +1,158 @@
+.carousel {
+    max-height: 40rem;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel__image {
+    width: 100%;
+    flex:1;
+    height:inherit;
+    max-height: inherit;
+    border-radius: 1rem;
+}
+
+.carousel__image-animation{
+    animation: keyframes-carousel_image_animation 6000ms infinite ease;
+    -webkit-animation: keyframes-carousel_image_animation 6000ms infinite ease;
+}
+@-webkit-keyframes keyframes-carousel_image_animation {
+    0% {
+        opacity: 0;
+    }
+
+    2% {
+        opacity: 0.1;
+    }
+
+    4% {
+        opacity: 0.2;
+    }
+
+    6% {
+        opacity: 0.4;
+    }
+
+    7% {
+        opacity: 0.5;
+    }
+
+    8% {
+        opacity: 0.65;
+    }
+
+    9% {
+        opacity: 0.85;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    /* 95%{
+        opacity: 0.8;
+    }
+
+    96%{
+        opacity: 0.6;
+    }
+    97%{
+        opacity: 0.4;
+    }
+    98%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0;
+    } */
+}
+
+@keyframes keyframes-carousel_image_animation {
+    0% {
+        opacity: 0;
+    }
+    2%{
+        opacity: 0.1;
+    }
+    4%{
+        opacity: 0.2;
+    }
+    6%{
+        opacity: 0.4;
+    }
+    7% {
+        opacity: 0.5;
+    }
+
+    8% {
+        opacity: 0.65;
+    }
+
+    9% {
+        opacity: 0.85;
+    }
+
+    12% {
+        opacity: 1;
+    }
+
+    /* 95%{
+        opacity: 0.8;
+    }
+
+    96%{
+        opacity: 0.6;
+    }
+    97%{
+        opacity: 0.4;
+    }
+    98%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 0;
+    } */
+}
+
+.carousel__left-btn,
+.carousel__right-btn {
+    background-color: rgba(0, 0, 0, 0.541);
+    border: 0px;
+    z-index: 10;
+    color: white;
+    flex: 1;
+    padding: 7% 1.5%;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 3rem;
+    display: none;
+}
+
+.carousel__left-btn {
+    border-radius: 0 1rem 1rem 0;
+    left: 0;
+}
+
+.carousel__right-btn {
+    border-radius: 1rem 0 0 1rem;
+    right: 0;
+}
+
+.carousel:hover .carousel__left-btn,
+.carousel:hover .carousel__right-btn {
+    display: block;
+    cursor: default;
+    font-weight: 900;
+
+    transition: 300ms ease all;
+
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}

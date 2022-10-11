@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(117, 97, 97, 0.726);
+  font-size: 28px;
+  overflow-x: hidden;
+  height: 100vh;
+  position: relative;
+}
+button{
+  outline: none;
+}
+

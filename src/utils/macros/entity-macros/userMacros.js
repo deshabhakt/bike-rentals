@@ -1,0 +1,6 @@
+export const USER_MANAGE_PAGE_TAB_MY_PROFILE = 'My Profile'
+export const USER_MANAGE_PAGE_TAB_BOOKING_HISTORY = 'Booking History'
+export const USER_MANAGE_PAGE_TAB_CHANGE_PASSWORD = 'Change Password'
+export const USER_MANAGE_PAGE_TAB_DELETE_ACCOUNT = 'Delete Account'
+
+export const USER_MY_BOOKINGS = USER_MANAGE_PAGE_TAB_BOOKING_HISTORY

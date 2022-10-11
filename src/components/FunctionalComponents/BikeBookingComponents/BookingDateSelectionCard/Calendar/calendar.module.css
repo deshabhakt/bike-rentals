@@ -1,0 +1,178 @@
+.calendar-container{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    min-height: 25rem;
+    max-width: fit-content;
+}
+
+.month-year-change-buttons-div{
+    display: flex;
+    justify-content: space-between;
+}
+.month-changer-div{
+    display: flex;
+    justify-content: space-around;  
+}
+.year-changer-div{
+    display: flex;
+    justify-content: space-around;
+}
+.month-changer-div>span{
+    min-width: 9rem;
+    text-align: center;
+    align-self: center;
+}
+.year-changer-div>span{
+    min-width: 6rem;
+    text-align: center;
+}
+
+.changer-buttons{
+    font-size: 1rem;
+    padding: 0.4rem 0.2rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+}
+
+.calendar-table{
+    border-collapse: collapse;
+    box-shadow: 10px 10px 101px gray;
+}
+.calendar-table-head{
+}
+.calendar-table-head>tr{
+    border: 0;
+}
+.calendar-table-head>tr>th{
+    width: fit-content;
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1.4rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.calendar-table-body{
+}
+.calendar-table-body>tr{
+    background-color: rgb(150, 165, 13);
+}
+.calendar-table-body>tr>td{
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 1.4rem;
+    transition: 300ms ease-in-out;
+}
+/* .calendar-table-body>tr>td:hover{
+    
+    background-color: rgb(23, 120, 8);
+} */
+
+.booked-days{
+    background-color:rgb(130, 4, 4);
+    color: white;
+}
+.inactive-days{
+    color: gray;
+}
+
+.today{
+    background-color:sienna;
+    color: white;
+}
+
+.selected-days{
+    background-color: rgb(48, 67, 11);
+    color: white;
+}
+
+@media screen and (max-width:720px) {
+    .calendar-container {
+        gap: 1rem;
+    }
+
+    .month-year-change-buttons-div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .month-changer-div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .year-changer-div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .month-changer-div>span {
+    }
+
+    .year-changer-div>span {
+    }
+
+    .changer-buttons {
+        font-size: 0.7rem;
+        border: 1px solid black;
+        border-radius: 0.2rem;
+    }
+
+    .calendar-table {
+        border-collapse: collapse;
+        box-shadow: 10px 10px 101px gray;
+    }
+
+    .calendar-table-head {}
+
+    .calendar-table-head>tr {
+        border: 0;
+    }
+
+    .calendar-table-head>tr>th {
+        width: fit-content;
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 1rem;
+        background-color: rgb(0, 0, 0);
+        color: white;
+    }
+
+    .calendar-table-body {}
+
+    .calendar-table-body>tr {
+        background-color: rgb(150, 165, 13);
+    }
+
+    .calendar-table-body>tr>td {
+        text-align: center;
+        padding: 0.6rem;
+        font-size: 1.4rem;
+        transition: 300ms ease-in-out;
+    }
+
+    /* .calendar-table-body>tr>td:hover{
+    
+    background-color: rgb(23, 120, 8);
+} */
+
+    .booked-days {
+        background-color: rgb(130, 4, 4);
+        color: white;
+    }
+
+    .inactive-days {
+        color: gray;
+    }
+
+    .today {
+        background-color: sienna;
+        color: white;
+    }
+
+    .selected-days {
+        background-color: rgb(48, 67, 11);
+        color: white;
+    }
+}

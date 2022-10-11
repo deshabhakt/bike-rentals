@@ -1,0 +1,80 @@
+.manage-user-page {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin: 6rem 2rem 1rem;
+    max-height: 88vh;
+}
+
+.manage-user__sidebar-list {
+    border-radius: 1rem 0rem 0rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: beige;
+    border-right: 1px solid black;
+    height: inherit;
+    overflow-y: scroll;
+}
+
+.manage-user__sidebar-list__tab {
+    padding: 1rem 3rem;
+}
+
+.manage-user__sidebar-list__tab:hover {
+    background-color: blueviolet;
+}
+
+.manage-user__sidebar-list__selected-tab {
+    padding: 1rem 3rem;
+    background-color: purple;
+    color: white;
+}
+
+.manage-user__main-container {
+    flex: 1;
+    border-radius: 0rem 1rem 1rem 0rem;
+
+    background-color: #ffe4c4;
+}
+
+.manage-user__sidebar-list__selected-tab__round-on-media-query {
+    border-radius: 1rem 0rem 0rem 0rem;
+}
+
+@media screen and (max-width:1000px) {
+
+    .manage-user-page {
+        flex-direction: column;
+        margin: 4rem 1rem 3rem;
+    }
+
+    .manage-user__sidebar-list__selected-tab__round-on-media-query {
+        border-radius: 1rem 1rem 0rem 0rem;
+    }
+
+    .manage-user__sidebar-list {
+        text-align: center;
+        border-radius: 1rem 1rem 0 0;
+        border: 0;
+    }
+
+    .manage-user__main-container {
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .manage-user-page{
+        max-height: 90vh;
+    }
+    .manage-user__sidebar-list{
+        min-height: 13rem;
+        font-size: 1rem;
+    }
+    .manage-user__main-container{
+        overflow-y: scroll;
+        max-height: inherit;
+    }
+}

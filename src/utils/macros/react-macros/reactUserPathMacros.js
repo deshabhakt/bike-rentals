@@ -1,0 +1,5 @@
+export const REACT_PATH_USER_SIGN_UP = '/user/sign-up'
+export const REACT_PATH_USER_SIGN_IN = '/user/sign-in'
+export const REACT_PATH_USER_SIGN_OUT = '/user/sign-out'
+export const REACT_PATH_USER_MANAGE = '/user/manage'
+export const REACT_PATH_USER_PROFILE = '/user/profile'

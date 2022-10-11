@@ -1,0 +1,66 @@
+.bike-info-card{
+    width: 100%;
+    height:50%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.bike-info-card__carousel{
+    flex: 1;
+}
+
+
+/* Bike info container */
+.bike-info-container{
+    flex: 1;
+    display:flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    gap:2rem 3rem;
+    justify-content: start;
+    max-height: 40rem;
+}
+
+
+
+/* bike attribute container */
+.bike-attribute-container{
+    max-height: fit-content;
+}
+
+.bike-attribute-container>label{
+    font-size: 1.5rem;
+}
+
+.bike-attribute-container>h1{
+    font-size: 2.6rem;
+    margin: 0rem 0 0 1.2rem;
+}
+
+
+@media screen and (max-width:1500px) {
+    .bike-info-card{
+        flex-direction: column;
+    }
+    .bike-info-card__carousel{
+        width: 100%;
+    }
+    .bike-info-container {
+    }
+}
+
+@media screen and (max-width:720px) {
+    .bike-info-container {
+        gap: 3rem;
+    }
+
+    .bike-attribute-container>label {
+        font-size: 1.2rem;
+    }
+
+    .bike-attribute-container>h1 {
+        font-size: 2rem;
+        margin: 0rem 0 0 1rem;
+    }
+}

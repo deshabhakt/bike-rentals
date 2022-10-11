@@ -1,0 +1,102 @@
+.booking-card{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 1rem 2rem 1rem 2rem;
+    width: 80%;
+    position: relative;
+
+}
+
+.booking-card__data-container{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.booking-card__data-container__heading{
+    margin: 1rem 0;
+}
+
+.booking-card__data-div{
+    display: flex;
+    gap: 1rem;
+}
+
+.booking-card__data-conatainer__date-input{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    position: relative;
+}
+.booking-card label{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 0.3rem 1rem 0.3rem 0;
+}
+/* .booking-card input{
+    font-size: 2rem;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+} */
+.booking-card__data-container__generated-data{
+    margin-top: 2rem;
+}
+.booking-card__data-container__generated-data label{
+    display: block;
+    margin-bottom: 1rem;
+}
+.error-div{
+    position: absolute;
+    bottom: -4rem;
+    left:30%
+}
+
+
+.date-input-div{
+    display: flex;
+    justify-content: space-around;
+    /* gap: 1rem; */
+    width: 25rem;
+}
+.date-input-div label{
+}
+
+.date-input-div input{
+    font-size: 2rem;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.calendar{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+@media screen and (max-width:720px) {
+    .booking-card label {
+        font-size: 1.5rem;
+    }
+    .date-input-div {
+        justify-content: flex-start;
+    }
+
+    .date-input-div input {
+        font-size: 1.5rem;
+    }
+    .error-div {
+        position: absolute;
+        bottom: -4rem;
+        left: 10%
+    }
+}

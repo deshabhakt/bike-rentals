@@ -1,0 +1,78 @@
+.home{
+    display: flex;
+    flex-direction: column;
+}
+.home__carousel{
+    width: 95%;
+    align-self: center;
+}
+.home__bikes-div__h1-card {
+    font-weight: bold;
+    min-width:20%;
+    margin-left: 1.5%;
+}
+
+.home__bikes-div{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0.8rem;
+    margin: 2.5rem 0rem;
+    background-color: white;
+    padding: 0.8rem;
+}
+.home__bikes-div__bike-card{
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    transition: 300ms ease-in-out;
+    padding: 0.6rem;
+}
+.home__bikes-div__bike-card:hover{
+    scale: 1.037;
+}
+.home__bikes-div__bike-card__book-button{
+    border-radius: 1rem;
+}
+@media screen and (max-width:1300px) {
+  
+    .home__bikes-div__h1-card {
+        min-width: 18rem;
+    }
+}
+
+@media screen and (max-width:720px) {
+
+    .home__bikes-div__h1-card {
+        font-size: 1.2rem;
+        min-width: 70%;
+        font-weight: bold;
+        margin-left: 1.5%;
+    }
+
+    .home__bikes-div {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 0.8rem;
+        margin: 2.5rem 0rem;
+        background-color: white;
+        padding: 0.8rem;
+    }
+
+    .home__bikes-div__bike-card {
+        background-color: gray;
+        color: rgb(255, 255, 255);
+        transition: 300ms ease-in-out;
+        padding: 0.6rem;
+    }
+
+    .home__bikes-div__bike-card:hover {
+        scale: 1.037;
+    }
+
+    .home__bikes-div__bike-card__book-button {
+        border-radius: 1rem;
+    }
+}

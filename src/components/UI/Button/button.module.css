@@ -1,0 +1,20 @@
+.button{
+    font-weight: bolder;
+    border-radius: 1rem;
+    border: 0;
+    padding: 4% 6%;
+    font-size: 80%;
+}
+@media screen and (max-width:1000px) {
+    .button{
+        padding: 4% 6%;
+        font-size: 80%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .button{
+        padding: 6% 6%;
+        font-size: 70%;
+    }
+}

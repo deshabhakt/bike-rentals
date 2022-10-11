@@ -1,0 +1,46 @@
+.bike-card{
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: rgb(138, 136, 136);
+    padding: 1%;
+    min-width: 20rem
+}
+
+.bike-card__bike-image{
+    transform: translate(100px,100px);
+}
+
+.bike-card__bike-info{
+    flex: 1;
+    display: flex;
+    justify-content: stretch;
+    margin-top: 1rem;
+}
+.bike-card__bike-name,
+.bike-card__bike-per-day-price {
+    align-self: flex-start;
+    flex: 1;
+    font-size: 70%;
+    padding-left: 3%;
+    font-weight: bold;
+}
+
+.bike-card__bike-book-button{
+    align-self: center;
+    font-weight: bold;
+    background-color: rgb(7, 100, 7);
+    border: 0;
+    border-radius: 10%;
+    color: aliceblue;
+    min-height: 4rem;
+}
+
+.bike-card__bike-book-button:hover{
+    background-color: rgb(16, 82, 16);
+}
+
+.bike-card__bike-info__price-and-name{
+    flex: 1;
+
+}

@@ -1,0 +1,107 @@
+.sign-up__main-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    margin-bottom: 0rem 0rem 2rem;
+}
+
+/* sign-up__sub-div-1 */
+.sign-up__sub-div-1{
+    flex: 1;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    padding: 1rem 2rem ;
+
+}
+
+
+/* sign-up__sub-div-2 */
+.sign-up__sub-div-2{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+}
+
+/* sign in form heading */
+.sign-up__sign-up-heading{
+    align-self: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.sign-up__form__name-container{
+    display: flex;
+    gap:1rem;
+}
+
+.sign-up__form__first-name-input,
+.sign-up__form__last-name-input{
+    max-width: 8rem;
+}
+
+.sign-up__form__buttons-div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+ .sign-up__form__sign-in-button,
+ .sign-up__form__submit-button{
+    color: white;
+    transition: 300ms ease-in;
+    padding: 1rem 2rem;
+}
+.sign-up__form__sign-in-button{
+    background-color:rgb(9, 118, 27);
+}
+
+.sign-up__form__sign-in-button:hover{
+    background-color:rgb(9, 100, 27);
+}
+
+.sign-up__form__submit-button{
+    background-color:rgb(174, 104, 13);
+}
+
+.sign-up__form__submit-button:hover {
+    background-color: rgb(150, 104, 13);
+}
+
+.sign-up__form__sign-in-button:active,
+.sign-up__form__submit-button:active {
+    scale: 1.1;
+}
+
+@media screen and (max-width:720px) {
+    .sign-up__main-div {
+        width: 20rem;
+    }
+
+    .sign-up__sub-div-1 {
+        padding: 1rem 1rem 0rem;
+    }
+
+    .sign-up__sub-div-1>h1 {
+        font-size: 2rem;
+    }
+
+    .sign-up__sub-div-1>h2 {
+        font-size: 1.8rem;
+    }
+
+    .sign-up__sub-div-2 {
+        padding: 0.5rem 0 0 2rem;
+    }
+
+    .sign-up__sign-up-heading {
+        font-size: 2rem;
+    }
+    .sign-up__form__first-name-input,
+    .sign-up__form__last-name-input {
+        max-width: 6rem;
+    }
+    .sign-up__form__sign-in-button,
+    .sign-up__form__submit-button {
+        padding: 5% 10%;
+    }
+}

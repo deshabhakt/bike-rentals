@@ -1,0 +1,15 @@
+.book-bike{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width:720px) {
+    .book-bike{
+        padding: 1rem;
+    }
+}
+
+.booking-card{
+    width: inherit;
+}
