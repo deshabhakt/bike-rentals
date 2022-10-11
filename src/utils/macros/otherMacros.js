@@ -1,0 +1,1 @@
+exports.MINIMUM_AGE_OF_USER = -1
