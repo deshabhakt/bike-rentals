@@ -11,6 +11,7 @@ const bikeRouter = require('./routers/Bike-routers/bike-router')
 const bikeDocRouter = require('./routers/Bike-routers/bike-pdf-router')
 const bikeImageRouter = require('./routers/Bike-routers/bike-image-router')
 const bookingRouter = require('./routers/booking-router')
+const bikeDummyRouter = require('./routers/dummy/bikeDummyRouter')
 app.use((req, res, next) => {
 	res.header('Access-Control-Allow-Origin', '*')
 	res.header(
@@ -22,13 +23,16 @@ app.use((req, res, next) => {
 	next()
 })
 
-app.use(express.json())
+app.use(express.json({limit:'200mb'}))
 app.use(userRouter)
 app.use(adminRouter)
 app.use(bikeRouter)
 app.use(bikeDocRouter)
 app.use(bikeImageRouter)
 app.use(bookingRouter)
+app.use(bookingRouter)
+
+app.use(bikeDummyRouter)
 
 app.get('/', (req, res) => {
 	res.send('<h1>Backend for bike-rentals project</h1>')
@@ -37,5 +41,5 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 5000
 
 app.listen(PORT, () => {
-	console.log('Server started successfully')
+	console.log('Server started successfully on PORT: ',PORT)
 })

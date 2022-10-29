@@ -81,6 +81,12 @@ adminSchema.virtual('bike-documents', {
 	foreignField: 'owner',
 })
 
+adminSchema.virtual('bikes', {
+	ref: 'Bike',
+	localField: '_id',
+	foreignField:'owner'
+})
+
 // defining custom function on objects of admin-schema for generating authentication tokens
 adminSchema.methods.generateAuthToken = async function () {
 	const admin = this

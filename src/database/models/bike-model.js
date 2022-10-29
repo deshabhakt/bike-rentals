@@ -27,15 +27,29 @@ const bikeSchema = new mongoose.Schema(
 			required: true,
 			trim: true,
 		},
+		condition: {
+			type: String,
+			required: true,
+			trim:true
+		},
 		per_day_charge: {
 			type: Number,
 			required:true
 		},
-		liecense_plate_number: {
+		licence_plate_number: {
 			type: String,
 			required: true,
 			trim: true,
 			unique: true,
+		},
+		color: {
+			type: String,
+			required: true,
+			trim:true
+		},
+		total_distance_travelled: {
+			type: Number,
+			required: true,
 		},
 		isBooked: {
 			type: Boolean,
@@ -48,6 +62,12 @@ const bikeSchema = new mongoose.Schema(
 		currentBookingId: {
 			type: String,
 			default:""
+		},
+		owner: {
+			type: mongoose.Schema.Types.ObjectId,
+			// required: true,
+			ref: 'Admin',
+			index: true,
 		},
 		booking_history: [
 			{

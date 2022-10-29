@@ -9,7 +9,8 @@ const fileStorage = multer.diskStorage({
 		callback(null, uploadFilesSavePath)
 	},
 	filename: function (req, file, callback) {
-		callback(null, file.originalname)
+		console.log(file.originalname)
+		callback(null, file.originalname+Date.now().toString())
 	},
 })
 
@@ -17,7 +18,6 @@ const bikeDocMiddleware = multer({
 	limits: {
 		fileSize: 1000000,
 	},
-	// dest: uploadFilesSavePath,
 	// storage: fileStorage,
 	fileFilter(req, file, cb) {
 		if (file.originalname.match(/\.(jpg|jpeg|png)$/)) {

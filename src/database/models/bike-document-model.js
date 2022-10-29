@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 
 // importing validator for validating user input for various fields
 const validator = require('validator')
+const { DOC_TYPE_BANNER_IMAGE, DOC_TYPE_BIKE_IMAGE, DOC_TYPE_BIKE_INSURANCE_CERTIFICATE, DOC_TYPE_BIKE_PUC, DOC_TYPE_BIKE_RC } = require('../../utils/macros/bikeDocumentMacros')
 
 // configuring task-schema for task-model
 const bikeDocumentSchema = new mongoose.Schema(
@@ -19,25 +20,26 @@ const bikeDocumentSchema = new mongoose.Schema(
 		},
 		doctype: {
 			type: String,
-			enum: ['image', 'pdf'],
+			enum: ['image', 'pdf','banner-image'],
 			required: true,
 		},
 		type: {
 			type: String,
 			trim: true,
+			enum:[DOC_TYPE_BANNER_IMAGE,DOC_TYPE_BIKE_IMAGE,DOC_TYPE_BIKE_INSURANCE_CERTIFICATE,DOC_TYPE_BIKE_PUC,DOC_TYPE_BIKE_RC]
 		},
 		size: {
 			type: Number,
 		},
 		owner: {
 			type: mongoose.Schema.Types.ObjectId,
-			required: true,
+			// required: true,
 			ref: 'Admin',
 			index: true,
 		},
 		productId: {
 			type: mongoose.Schema.Types.ObjectId,
-			required: true,
+			// required: true,
 			ref: 'Bike',
 			index: true,
 		},
