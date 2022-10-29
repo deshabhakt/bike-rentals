@@ -1,6 +1,6 @@
 .carousel {
-    max-height: 40rem;
-    height: inherit;
+    min-width: 20rem;
+    max-height: 50rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,7 +8,7 @@
 }
 
 .carousel__image {
-    width: 100%;
+    min-width: 100%;
     flex:1;
     height:inherit;
     max-height: inherit;
@@ -24,31 +24,31 @@
         opacity: 0;
     }
 
-    2% {
+    1% {
         opacity: 0.1;
     }
 
-    4% {
+    2% {
         opacity: 0.2;
     }
 
-    6% {
+    3% {
         opacity: 0.4;
     }
 
-    7% {
+    4% {
         opacity: 0.5;
     }
 
-    8% {
+    5% {
         opacity: 0.65;
     }
 
-    9% {
+    6% {
         opacity: 0.85;
     }
 
-    12% {
+    7% {
         opacity: 1;
     }
 
@@ -74,28 +74,32 @@
     0% {
         opacity: 0;
     }
-    2%{
+
+    1% {
         opacity: 0.1;
     }
-    4%{
+
+    2% {
         opacity: 0.2;
     }
-    6%{
+
+    3% {
         opacity: 0.4;
     }
-    7% {
+
+    4% {
         opacity: 0.5;
     }
 
-    8% {
+    5% {
         opacity: 0.65;
     }
 
-    9% {
+    6% {
         opacity: 0.85;
     }
 
-    12% {
+    7% {
         opacity: 1;
     }
 
@@ -129,6 +133,7 @@
     font-weight: bolder;
     font-size: 3rem;
     display: none;
+    cursor:pointer;
 }
 
 .carousel__left-btn {

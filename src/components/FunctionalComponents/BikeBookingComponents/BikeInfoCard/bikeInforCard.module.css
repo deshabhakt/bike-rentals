@@ -1,9 +1,9 @@
 .bike-info-card{
-    width: 100%;
-    height:50%;
     display: flex;
     flex-wrap: wrap;
     gap:2rem;
+    height: inherit;
+    position: relative;
 }
 
 .bike-info-card__carousel{
@@ -17,11 +17,20 @@
     display:flex;
     flex-direction: row;    
     flex-wrap: wrap;
+    justify-content:stretch;
     gap:2rem 3rem;
-    justify-content: start;
-    max-height: 40rem;
+    
+    background-color: white;
+    padding: 1.5rem 1rem 1rem 3rem;
+    border-radius: 1rem;
+
 }
 
+/* .price-div{
+    position: absolute;
+    bottom:10%;
+    right:8%;
+} */
 
 
 /* bike attribute container */
@@ -46,8 +55,7 @@
     .bike-info-card__carousel{
         width: 100%;
     }
-    .bike-info-container {
-    }
+    
 }
 
 @media screen and (max-width:720px) {

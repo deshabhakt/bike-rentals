@@ -1,13 +1,28 @@
 .bikes{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 1% 4%;
-    gap: 4% 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
+}
+
+.bikes__bike-card-holder{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 4rem;
 }
 
 .bikes__bike-card{
+    color:black;
     background-color: white;
     transition: all 300ms ease-in-out;
+    max-width: 27rem;
 }
 
 .bikes__bike-card>span{
@@ -15,7 +30,7 @@
 }
 
 .bikes__bike-card:hover{
-    scale:1.08;
+    scale:1.03;
 }
 
 .bikes__bike-card__button{
@@ -27,7 +42,41 @@
     scale: 1.1;
 }
 
-@media screen and (max-width:1800px) {
+.bikes__get-more-bikes-button{
+    padding: 1rem 3rem;
+    border-radius: 10rem;
+    outline: 0;
+    border: 0px;
+    /* transform: rotate(-90deg); */
+
+    background-color: aliceblue;
+    min-height: fit-content;
+    min-width: fit-content;
+
+    font-weight: bolder;
+    font-size: 2rem;
+
+    transform: 300ms ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.bikes__get-more-bikes-button:hover{
+    background-color: rgb(183, 186, 187);
+}
+
+.bikes__get-more-bikes-button:active{
+    scale:1.03;
+}
+
+.bikes__get-more-bikes-button>span:nth-child(2){
+    font-size: 3rem;
+}
+
+/* @media screen and (max-width:1400px) {
     .bikes{
         grid-template-columns: auto auto;
     }
@@ -36,6 +85,6 @@
 @media screen and (max-width:1200px) {
     .bikes {
         grid-template-columns: auto;
-        gap: 2% 2%;
+        gap: 0.5%;
     }
-}
+} */

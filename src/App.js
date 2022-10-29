@@ -35,7 +35,7 @@ import styles from './app.module.css'
 
 const App = () => {
 
-    const loggedInState = useSelector((state)=>state.loggedInState)
+    const {loggedInState,newBooking} = useSelector((state)=>state)
     const dispatch = useDispatch()
 
     const getDataFromLocalStorage = () => {
@@ -100,21 +100,21 @@ const App = () => {
                     )}
 
                     {/* Bike path */}
-                    {/* <Route
+                    <Route
                         path={REACT_PATH_BOOK_BIKE}
                         element={
                             loggedInState.isLoggedIn ? (
-                                <BookBike />
+                               newBooking.isBikeSelected?<BookBike />:<Navigate to={REACT_PATH_BIKES}/>
                             ) : (
                                 <Navigate to={REACT_PATH_USER_SIGN_IN} />
                             )
                         }
-                    /> */}
+                    />
 
-                    <Route
+                    {/* <Route
                         path={REACT_PATH_BOOK_BIKE}
                         element={<BookBike />}
-                    />
+                    /> */}
 
                 </Routes>
                 {/* </div> */}

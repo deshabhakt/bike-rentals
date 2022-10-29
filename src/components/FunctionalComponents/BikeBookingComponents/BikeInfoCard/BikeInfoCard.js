@@ -1,52 +1,68 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+// import Card from '../../../UI/Card/Card'
 import Carousel from '../../Carousel/Carousel'
 
 import styles from './bikeInforCard.module.css'
 const BikeInfoCard = () => {
+    const selectedBikeData = useSelector((state) => state.newBooking.selectedBike)
     return (
         <div className={styles['bike-info-card']}>
-            <Carousel className={styles['bike-info-card__carousel']} />
-            <BikeInfoContainer />
+            <Carousel
+                className={styles['bike-info-card__carousel']}
+                images = {selectedBikeData.images}
+                disableButtons
+            />
+            <BikeInfoContainer
+                selectedBikeData={selectedBikeData}
+            />
         </div>
     )
 }
 
-const BikeInfoContainer = () => {
+const BikeInfoContainer = ({selectedBikeData}) => {
     return (
         <div className={styles['bike-info-container']}>
             <BikeAttributeContainer
-                attributeName={'Bike Name'}
-                attributeValue={'Pulser 220'}
+                attributeName={'Name'}
+                attributeValue={selectedBikeData.name}
+            />
+            <BikeAttributeContainer
+                attributeName={'Color'}
+                attributeValue={selectedBikeData.color}
             />
             <BikeAttributeContainer
                 attributeName={'Engine Size'}
-                attributeValue={'220cc'}
+                attributeValue={selectedBikeData.engine_size}
             />
+
             <BikeAttributeContainer
-                attributeName={'Manufacturer'}
-                attributeValue={'Bajaj'}
+                attributeName={'Registration Date'}
+                attributeValue={selectedBikeData.registration_date}
             />
             <BikeAttributeContainer
                 attributeName={'Registration Number'}
-                attributeValue={'MH 01 DP 0101'}
-            />
-            <BikeAttributeContainer
-                attributeName={'Registration Date'}
-                attributeValue={getDateInDDMMYYY()}
+                attributeValue={selectedBikeData.licence_plate_number}
             />
 
             <BikeAttributeContainer
                 attributeName={'Total Distance traveled'}
-                attributeValue={'20000 km'}
+                attributeValue={`${selectedBikeData.total_distance_travelled} km`}
             />
             <BikeAttributeContainer
                 attributeName={'Condition'}
-                attributeValue={'Well Maintained'}
+                attributeValue={selectedBikeData.condition}
             />
             <BikeAttributeContainer
-                attributeName={'Per day charge'}
-                attributeValue={'1000/-'}
+                attributeName={'Manufacturer'}
+                attributeValue={selectedBikeData.manufacturer}
             />
+            <div className={styles['price-div']}>
+                <BikeAttributeContainer
+                    attributeName={'Per day charge'}
+                    attributeValue={`${selectedBikeData.per_day_charge}/-`}
+                />
+            </div>
         </div>
     )
 }

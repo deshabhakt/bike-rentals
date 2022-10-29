@@ -1,4 +1,4 @@
-export const SERVER_URL = 'http://192.168.0.178:5000'
+export const SERVER_URL = 'http://localhost:5000'
 
 export const URL_SIGN_UP_USER = `${SERVER_URL}/user`
 export const URL_SIGN_IN_USER = `${SERVER_URL}/user/login`

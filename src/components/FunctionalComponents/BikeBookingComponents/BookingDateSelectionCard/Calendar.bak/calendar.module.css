@@ -1,28 +1,14 @@
 .calendar-container{
     display: flex;
     flex-direction: column;
-    background-color: wheat;
-    border-radius: 1rem;
-    padding: 1rem;
-    max-height: fit-content;
-    /* box-shadow: 0 0 10px 10px gray; */
-
-    /* making text unselectable */
-    -webkit-user-select: none;
-    /* Safari */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* IE10+/Edge */
-    user-select: none;
-    /* Standard */
-
+    gap:1rem;
+    min-height: 25rem;
+    max-width: fit-content;
 }
 
 .month-year-change-buttons-div{
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem 0.9rem;
 }
 .month-changer-div{
     display: flex;
@@ -44,25 +30,16 @@
 
 .changer-buttons{
     font-size: 1rem;
-    padding: 0.5rem 0.2rem;
-    border: 0px solid black;
+    padding: 0.4rem 0.2rem;
+    border: 1px solid black;
     border-radius: 0.2rem;
-    background-color:white;
-
-    font-weight: bolder;
-
-    transition: 250ms ease-in-out;
-}
-.changer-buttons:hover {
-    background-color: lightgray;
-}
-.changer-buttons:active{
-    border: 0;
-    background-color: gray;
 }
 
 .calendar-table{
     border-collapse: collapse;
+    box-shadow: 10px 10px 101px gray;
+}
+.calendar-table-head{
 }
 .calendar-table-head>tr{
     border: 0;
@@ -70,33 +47,27 @@
 .calendar-table-head>tr>th{
     width: fit-content;
     text-align: center;
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem;
     font-size: 1.4rem;
     background-color: rgb(0, 0, 0);
     color: white;
 }
-.calendar-table-head tr:first-child th:first-child{
-    border-top-left-radius: 1rem;
-}
-.calendar-table-head tr:first-child th:last-child {
-    border-top-right-radius: 1rem;
-}
 
-.calendar-table-body-tr-td{
-    font-size: 1.4rem;
-    text-align: center;
-    padding: 0.6rem 1.5rem;
-    
+.calendar-table-body{
+}
+.calendar-table-body>tr{
     background-color: rgb(150, 165, 13);
 }
-
-.calendar-table-body tr:last-child td:first-child {
-    border-bottom-left-radius: 1rem;
+.calendar-table-body>tr>td{
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 1.4rem;
+    transition: 300ms ease-in-out;
 }
-
-.calendar-table-body tr:last-child td:last-child {
-    border-bottom-right-radius: 1rem;
-}
+/* .calendar-table-body>tr>td:hover{
+    
+    background-color: rgb(23, 120, 8);
+} */
 
 .booked-days{
     background-color:rgb(130, 4, 4);
@@ -105,10 +76,7 @@
 .inactive-days{
     color: gray;
 }
-.selected-inactive-days{
-    background-color: darkolivegreen;
-    color: bisque;
-}
+
 .today{
     background-color:sienna;
     color: white;
@@ -120,6 +88,9 @@
 }
 
 @media screen and (max-width:720px) {
+    .calendar-container {
+        gap: 1rem;
+    }
 
     .month-year-change-buttons-div {
         display: flex;
@@ -136,6 +107,12 @@
         justify-content: space-around;
     }
 
+    .month-changer-div>span {
+    }
+
+    .year-changer-div>span {
+    }
+
     .changer-buttons {
         font-size: 0.7rem;
         border: 1px solid black;
@@ -147,6 +124,7 @@
         box-shadow: 10px 10px 101px gray;
     }
 
+    .calendar-table-head {}
 
     .calendar-table-head>tr {
         border: 0;
@@ -161,6 +139,8 @@
         color: white;
     }
 
+    .calendar-table-body {}
+
     .calendar-table-body>tr {
         background-color: rgb(150, 165, 13);
     }
@@ -171,6 +151,11 @@
         font-size: 1.4rem;
         transition: 300ms ease-in-out;
     }
+
+    /* .calendar-table-body>tr>td:hover{
+    
+    background-color: rgb(23, 120, 8);
+} */
 
     .booked-days {
         background-color: rgb(130, 4, 4);
@@ -190,21 +175,4 @@
         background-color: rgb(48, 67, 11);
         color: white;
     }
-
-    .calendar-table-head tr:first-child th:first-child {
-        border-top-left-radius: 0rem;
-    }
-
-    .calendar-table-head tr:first-child th:last-child {
-        border-top-right-radius: 0rem;
-    }
-
-    .calendar-table-body tr:last-child td:first-child {
-        border-bottom-left-radius: 0rem;
-    }
-
-    .calendar-table-body tr:nth-child(2) td:nth-child(2) {
-        border-bottom-right-radius: 0rem;
-    }
-
 }

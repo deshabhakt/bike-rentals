@@ -7,10 +7,10 @@ const Error = (props) => {
   return (
       <>
           <h1
-            className={`${styles['error']} ${props.errorStyle?props.errorStyle:''}`}
+            className={`${styles['error']} ${props.errorStyles?props.errorStyles:''}`}
           >{props.error}</h1>
           {props.message && <h1
-          className={`${styles['message']} ${props.messageStyle?props.messageStyle:''}`}
+          className={`${styles['message']} ${props.messageStyles?props.messageStyles:''}`}
           >{props.message}</h1>}
       </>
   )

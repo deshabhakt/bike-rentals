@@ -33,10 +33,9 @@ export const orderOfWeekDays = [
 export const getNumberOfDaysBetweenTwoDates = (date1,date2) => {
     const parsedDate1 = new Date(date1)
     const parsedDate2 = new Date(date2)
-    // console.log('date1',date1,'date2',date2)
+    console.log('date1',date1,'date2',date2)
     const diffInTime = parsedDate2.getTime() - parsedDate1.getTime()
     const diffInDays = diffInTime / (1000 * 3600 * 24)
-    // console.log('difference in days ',diffInDays)
     return diffInDays 
 }
 
@@ -200,8 +199,7 @@ export const parseDateForHTMLInput = (date) => {
         '-' +
         (parsedDate.getMonth() + 1) +
         '-' +
-        (parsedDate.getDate().toString().length === 1 ? `0${parsedDate.getDate()}` : parsedDate.getDate()) 
-    // console.log('parsed Date', parsedDate)
+        parsedDate.getDate() 
     return parsedDate
     // return parsedDate.toISOString().split('T')[0] //// [YYYY-MM-DD]
 }
